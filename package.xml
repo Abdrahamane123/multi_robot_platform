@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>citrus_yield</name>
-  <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="my_email@email.com">Josh Newans</maintainer>
+  <name>multi_robot_platform</name>
+  <version>1.0.0</version>
+  <description>Multi-robot ROS2 Gazebo platform for coordinated autonomous navigation</description>
+  <maintainer email="dev@example.com">Development Team</maintainer>
   <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

@@ -9,7 +9,7 @@ from ament_index_python.packages import get_package_share_directory
 def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time')
 
-    joy_params = os.path.join(get_package_share_directory('citrus_yield'),'config','joystick.yaml')
+    joy_params = os.path.join(get_package_share_directory('multi_robot_platform'),'config','joystick.yaml')
 
     joy_node = Node(
             package='joy',
@@ -25,13 +25,13 @@ def generate_launch_description():
             remappings=[('/cmd_vel','/cmd_vel_joy')]
          )
 
-    # twist_stamper = Node(
-    #         package='twist_stamper',
-    #         executable='twist_stamper',
-    #         parameters=[{'use_sim_time': use_sim_time}],
-    #         remappings=[('/cmd_vel_in','/diff_cont/cmd_vel_unstamped'),
-    #                     ('/cmd_vel_out','/diff_cont/cmd_vel')]
-    #      )
+    twist_stamper = Node(
+            package='twist_stamper',
+            executable='twist_stamper',
+            parameters=[{'use_sim_time': use_sim_time}],
+            remappings=[('/cmd_vel_in','/diff_cont/cmd_vel_unstamped'),
+                        ('/cmd_vel_out','/diff_cont/cmd_vel')]
+         )
 
 
     return LaunchDescription([
@@ -41,5 +41,5 @@ def generate_launch_description():
             description='Use sim time if true'),
         joy_node,
         teleop_node,
-        # twist_stamper       
+        twist_stamper       
     ])

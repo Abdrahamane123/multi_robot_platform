@@ -1,0 +1,24 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/dev/robot_ws/install/yolov8_ros2/lib/python3.10/site-packages",
+        "/home/dev/robot_ws/install/yolov8_detector/lib/python3.10/site-packages",
+        "/home/dev/robot_ws/install/twist_stamper/lib/python3.10/site-packages",
+        "/home/dev/robot_ws/install/serial_motor_demo/lib/python3.10/site-packages",
+        "/home/dev/robot_ws/install/serial_motor_demo_msgs/local/lib/python3.10/dist-packages",
+        "/home/dev/robot_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages",
+        "/home/dev/robot_ws/install/joy_tester/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/dev/robot_ws/install/yolov8_ros2/lib/python3.10/site-packages",
+        "/home/dev/robot_ws/install/yolov8_detector/lib/python3.10/site-packages",
+        "/home/dev/robot_ws/install/twist_stamper/lib/python3.10/site-packages",
+        "/home/dev/robot_ws/install/serial_motor_demo/lib/python3.10/site-packages",
+        "/home/dev/robot_ws/install/serial_motor_demo_msgs/local/lib/python3.10/dist-packages",
+        "/home/dev/robot_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages",
+        "/home/dev/robot_ws/install/joy_tester/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

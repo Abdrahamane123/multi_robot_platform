@@ -1,0 +1,162 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Value: true
+      Cell Size: 1
+      Line Style:
+        Line Width: 0.03
+        Value: Lines
+      Normal Cell Count: 0
+      Plane: XY
+      Plane Cell Count: 20
+      Reference Frame: <Fixed Frame>
+
+    # ── Robot 1 ───────────────────────────────
+    - Class: rviz_default_plugins/RobotModel
+      Name: Robot1 Model
+      Enabled: true
+      Description Source: Topic
+      Description Topic:
+        Value: /robot1/robot_description
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+      TF Prefix: robot1
+      Update Interval: 0
+      Visual Enabled: true
+      Alpha: 1
+
+    - Class: rviz_default_plugins/LaserScan
+      Name: Robot1 Scan
+      Enabled: true
+      Topic:
+        Value: /robot1/scan
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+      Size (m): 0.03
+      Color: 255; 0; 0
+
+    - Class: rviz_default_plugins/Odometry
+      Name: Robot1 Odom
+      Enabled: false
+      Topic:
+        Value: /robot1/diff_cont/odom
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+      Keep: 100
+
+    # ── Robot 2 ───────────────────────────────
+    - Class: rviz_default_plugins/RobotModel
+      Name: Robot2 Model
+      Enabled: true
+      Description Source: Topic
+      Description Topic:
+        Value: /robot2/robot_description
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+      TF Prefix: robot2
+      Update Interval: 0
+      Visual Enabled: true
+      Alpha: 1
+
+    - Class: rviz_default_plugins/LaserScan
+      Name: Robot2 Scan
+      Enabled: true
+      Topic:
+        Value: /robot2/scan
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+      Size (m): 0.03
+      Color: 0; 0; 255
+
+    - Class: rviz_default_plugins/Odometry
+      Name: Robot2 Odom
+      Enabled: false
+      Topic:
+        Value: /robot2/diff_cont/odom
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+      Keep: 100
+
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+      Show Names: false
+      Show Arrows: true
+      Show Axes: true
+      Marker Scale: 0.3
+
+    # ── Maps from SLAM Toolbox ────────────────
+    - Class: rviz_default_plugins/Map
+      Name: Robot1 Map
+      Enabled: true
+      Topic:
+        Value: /robot1/map
+        Depth: 5
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+      Alpha: 0.7
+      Color Scheme: map
+      Draw Behind: true
+
+    - Class: rviz_default_plugins/Map
+      Name: Robot2 Map
+      Enabled: true
+      Topic:
+        Value: /robot2/map
+        Depth: 5
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+      Alpha: 0.7
+      Color Scheme: map
+      Draw Behind: true
+
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: world
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+      Hide Inactive Objects: true
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/FocusCamera
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 5
+      Name: Current View
+      Near Clip Distance: 0.01
+      Pitch: 0.5
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz_default_plugins)
+      Yaw: 0.5
+Window Geometry:
+  Height: 800
+  Width: 1200
+  Displays:
+    collapsed: false
+  Views:
+    collapsed: true

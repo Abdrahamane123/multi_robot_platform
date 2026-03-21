@@ -1,0 +1,1257 @@
+<sdf version='1.10'>
+  <world name='empty'>
+    <physics name='1ms' type='ignored'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <plugin name='gz::sim::systems::Physics' filename='gz-sim-physics-system'/>
+    <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
+    <plugin name='gz::sim::systems::SceneBroadcaster' filename='gz-sim-scene-broadcaster-system'/>
+    <plugin name='gz::sim::systems::Sensors' filename='gz-sim-sensors-system'>
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin name='gz::sim::systems::Contact' filename='gz-sim-contact-system'/>
+    <gravity>0 0 -9.8000000000000007</gravity>
+    <magnetic_field>5.5644999999999998e-06 2.2875799999999999e-05 -4.2388400000000002e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.400000006 0.400000006 0.400000006 1</ambient>
+      <background>0.699999988 0.699999988 0.699999988 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <model name='ground_plane'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.800000012 0.800000012 0.800000012 1</ambient>
+            <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+            <specular>0.800000012 0.800000012 0.800000012 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 0 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_0</name>
+      <pose>-0.35685199499130249 -5.628563404083252 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120</name>
+      <pose>0.83293700218200684 -5.6273598670959473 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_1</name>
+      <pose>-1.544157862663269 -5.6324200630187988 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_2</name>
+      <pose>-2.7144672870635986 -5.5914797782897949 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_3</name>
+      <pose>-3.8731593303119554 -5.5725892961037093 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4</name>
+      <pose>-4.4356999397277832 -4.4369502067565918 0 0 0 1.5457000021568041</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_1</name>
+      <pose>-4.3982262994835422 -3.24438420530256 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_2</name>
+      <pose>-4.36813955547529 -2.0533426592199215 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_3</name>
+      <pose>-4.3498152173309377 -0.91687128158271447 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_4</name>
+      <pose>-4.3477555225326974 0.28172206908551911 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_5</name>
+      <pose>-4.3208279952712569 1.4610007082467025 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_6</name>
+      <pose>-4.2733258208930085 2.6498588350448875 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_7</name>
+      <pose>-4.2296361363628936 3.8318427171924121 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_8</name>
+      <pose>6.6258840152002429 -4.5517402181469997 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_8_1</name>
+      <pose>6.6506416952005196 -3.4077290684582149 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_8_2</name>
+      <pose>6.6727478997839897 -2.2701421122341001 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_8_3</name>
+      <pose>6.7002160431771687 -1.0828041670937656 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_8_4</name>
+      <pose>6.7101581063703746 0.093089397837734289 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_8_5</name>
+      <pose>6.7424217656234768 1.2510413503956384 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_8_6</name>
+      <pose>6.7702385736417012 2.4098205909300492 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_8_7</name>
+      <pose>6.8323001861572266 4.9045500755310059 0 0 0 1.5457000021568039</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_3_1</name>
+      <pose>-4.4414579648323036 -5.5783361873774009 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_3_2</name>
+      <pose>2.0303053462569842 -5.6460528823919622 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_3_3</name>
+      <pose>3.2368897760732773 -5.6705869915699889 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_3_4</name>
+      <pose>4.4210137284221958 -5.647696030177646 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_3_5</name>
+      <pose>5.5111784156366328 -5.7140204360238362 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_3_6</name>
+      <pose>-4.2441249353065116 3.8234848037141491 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_3_7</name>
+      <pose>-3.0654392816959497 3.8153086822872471 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_3_8</name>
+      <pose>-1.8951598763239408 3.8164084061280636 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_3_9</name>
+      <pose>-0.73430340039312347 3.8118083638887716 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_3_10</name>
+      <pose>0.44833341321434261 3.8197849163974302 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_3_11</name>
+      <pose>1.6047420587267895 3.8284714318617343 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_3_12</name>
+      <pose>2.786597196241523 3.8261863636484374 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_3_13</name>
+      <pose>5.6165284588415112 3.7613710803489169 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_3_14</name>
+      <pose>5.025394222395378 3.759395696185786 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_8_7_1</name>
+      <pose>6.7903959931861575 3.7499728563671262 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_3_2_1</name>
+      <pose>2.8214161415890278 -5.661877930300216 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_3_2_2</name>
+      <pose>1.2064793147163011 -5.6905288988512304 0 0 0 0</pose>
+    </include>
+    <model name='capsule'>
+      <pose>-3.7130200862884521 -3.6050710678100586 0.499999999902001 0 0 0</pose>
+      <link name='capsule_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.074153999999999998</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.074153999999999998</iyy>
+            <iyz>0</iyz>
+            <izz>0.018769000000000001</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <collision name='capsule_collision'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='capsule_visual'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='sphere'>
+      <pose>-3.6724588750257747 2.5767556525929947 0.499999999902001 0 0 0</pose>
+      <link name='sphere_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.10000000000000001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.10000000000000001</iyy>
+            <iyz>0</iyz>
+            <izz>0.10000000000000001</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <collision name='sphere_collision'>
+          <geometry>
+            <sphere>
+              <radius>0.5</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='sphere_visual'>
+          <geometry>
+            <sphere>
+              <radius>0.5</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='cone'>
+      <pose>2.989963765157619 -0.70354598532660595 0.49999999553651692 3.4340538420580203e-09 -9.0946273292713742e-09 -1.5238244452285792e-06</pose>
+      <link name='cone_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.074999999999999997</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.074999999999999997</iyy>
+            <iyz>0</iyz>
+            <izz>0.074999999999999997</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <collision name='cone_collision'>
+          <geometry>
+            <cone>
+              <radius>0.5</radius>
+              <length>1</length>
+            </cone>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='cone_visual'>
+          <geometry>
+            <cone>
+              <radius>0.5</radius>
+              <length>1</length>
+            </cone>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='box'>
+      <pose>3.0457141399383114 18.392530441284563 0.49999899675572507 7.5649037273406055e-11 8.4344596699633185e-12 1.4304099522647524e-06</pose>
+      <link name='box_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.16666</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.16666</iyy>
+            <iyz>0</iyz>
+            <izz>0.16666</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <collision name='box_collision'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='box_visual'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='capsule_0'>
+      <pose>-0.062116910319596208 3.1497468775291697 0.499999999902001 0 0 0</pose>
+      <link name='capsule_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.074153999999999998</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.074153999999999998</iyy>
+            <iyz>0</iyz>
+            <izz>0.018769000000000001</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <collision name='capsule_collision'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='capsule_visual'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='capsule_1'>
+      <pose>0.13750707830176179 -3.829824897996196 0.499999999902001 0 0 0</pose>
+      <link name='capsule_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.074153999999999998</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.074153999999999998</iyy>
+            <iyz>0</iyz>
+            <izz>0.018769000000000001</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <collision name='capsule_collision'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='capsule_visual'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='cylinder'>
+      <pose>-1.8842999935150146 13.988702774047852 0.49999899681693183 -2.6652408311947103e-20 4.5897901421099532e-19 1.6689960643868981e-21</pose>
+      <link name='cylinder_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.14580000000000001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.14580000000000001</iyy>
+            <iyz>0</iyz>
+            <izz>0.125</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <collision name='cylinder_collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.5</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='cylinder_visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.5</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_8_7_2</name>
+      <pose>6.8533300560270476 6.0667387870980019 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_8_7_3</name>
+      <pose>6.8660940137085404 7.2410709649595901 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_8_7_4</name>
+      <pose>6.8802362476292567 8.4167445985586138 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_8_7_5</name>
+      <pose>3.571169432710791 8.4618524866191027 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_8_7_6</name>
+      <pose>3.5466767004931796 7.2974133605136764 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_8_7_7</name>
+      <pose>3.5075768854690952 6.1678683074515996 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_3_12_1</name>
+      <pose>2.2651912974606452 5.0925239206446209 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_3_12_2</name>
+      <pose>1.1463056776303022 5.1027944863518426 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_4_8_7_2_1</name>
+      <pose>1.1297027523979764 5.0467396327362515 0 0 0 1.5457000874960058</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/standing person/3</uri>
+      <name>person_standing</name>
+      <pose>-5.7738223075866699 11.54069995880127 -8.5103175550227569e-07 4.914147698019862e-18 1.3736198934848278e-21 -1.647068129317034e-18</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walking person/3</uri>
+      <name>person_walking</name>
+      <pose>5.1142826080322266 8.3149003982543945 -7.3271248492157154e-11 2.8849793689327356e-21 2.5747147418295953e-21 -8.6183130309054876e-22</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree</name>
+      <pose>-7.2034201622009277 4.8625001907348633 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/oak tree/7</uri>
+      <name>Oak tree</name>
+      <pose>11.232718687137945 13.141230144921998 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/office desk/1</uri>
+      <name>Desk</name>
+      <pose>4.9450893714200888 -3.5455143053958516 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/desk/2</uri>
+      <name>Desk_0</name>
+      <pose>-2.3104018245354041 -4.2323988725512516 -5.9742866868883747e-12 2.1194255118289761e-18 -4.1108243682729579e-12 -4.3562930203829707e-30</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/office chair/1</uri>
+      <name>OfficeChair</name>
+      <pose>3.748288965666104 -3.7782374852920682 0 0 0 0</pose>
+    </include>
+    <model name='capsule_2'>
+      <pose>-1.1744078438431966 18.358200317475355 0.499999999902001 0 0 0</pose>
+      <link name='capsule_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.074153999999999998</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.074153999999999998</iyy>
+            <iyz>0</iyz>
+            <izz>0.018769000000000001</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <collision name='capsule_collision'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='capsule_visual'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='capsule_2_1'>
+      <pose>-1.8505389739985083 18.351597981903431 0.499999999902001 0 0 0</pose>
+      <link name='capsule_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.074153999999999998</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.074153999999999998</iyy>
+            <iyz>0</iyz>
+            <izz>0.018769000000000001</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <collision name='capsule_collision'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='capsule_visual'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='capsule_2_2'>
+      <pose>-2.6544801793811721 18.381919192859243 0.499999999902001 0 0 0</pose>
+      <link name='capsule_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.074153999999999998</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.074153999999999998</iyy>
+            <iyz>0</iyz>
+            <izz>0.018769000000000001</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <collision name='capsule_collision'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='capsule_visual'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='capsule_2_3'>
+      <pose>-3.6281687934578501 18.360885744226785 0.499999999902001 0 0 0</pose>
+      <link name='capsule_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.074153999999999998</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.074153999999999998</iyy>
+            <iyz>0</iyz>
+            <izz>0.018769000000000001</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <collision name='capsule_collision'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='capsule_visual'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='capsule_2_4'>
+      <pose>-4.493501868292622 18.378251973693871 0.499999999902001 0 0 0</pose>
+      <link name='capsule_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.074153999999999998</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.074153999999999998</iyy>
+            <iyz>0</iyz>
+            <izz>0.018769000000000001</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <collision name='capsule_collision'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='capsule_visual'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='box_0'>
+      <pose>0.0050657519926229355 18.484449632872821 0.49999999990199806 6.2287739151293738e-22 9.3279666454713669e-22 -3.6315533669320137e-22</pose>
+      <link name='box_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.16666</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.16666</iyy>
+            <iyz>0</iyz>
+            <izz>0.16666</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <collision name='box_collision'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='box_visual'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='capsule_2_5'>
+      <pose>4.2645426082303155 18.582635744553105 0.499999999902001 0 0 0</pose>
+      <link name='capsule_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.074153999999999998</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.074153999999999998</iyy>
+            <iyz>0</iyz>
+            <izz>0.018769000000000001</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <collision name='capsule_collision'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='capsule_visual'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='capsule_2_6'>
+      <pose>5.2650169396700903 18.57826846305392 0.499999999902001 0 0 0</pose>
+      <link name='capsule_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.074153999999999998</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.074153999999999998</iyy>
+            <iyz>0</iyz>
+            <izz>0.018769000000000001</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <collision name='capsule_collision'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='capsule_visual'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='capsule_2_7'>
+      <pose>6.4367686677079243 18.526098235646813 0.499999999902001 0 0 0</pose>
+      <link name='capsule_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.074153999999999998</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.074153999999999998</iyy>
+            <iyz>0</iyz>
+            <izz>0.018769000000000001</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <collision name='capsule_collision'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='capsule_visual'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='capsule_2_8'>
+      <pose>7.6567763591394904 18.543258882701906 0.499999999902001 0 0 0</pose>
+      <link name='capsule_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.074153999999999998</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.074153999999999998</iyy>
+            <iyz>0</iyz>
+            <izz>0.018769000000000001</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <collision name='capsule_collision'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='capsule_visual'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='capsule_2_9'>
+      <pose>-5.7820267139350516 18.397717848950208 0.499999999902001 0 0 0</pose>
+      <link name='capsule_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.074153999999999998</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.074153999999999998</iyy>
+            <iyz>0</iyz>
+            <izz>0.018769000000000001</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <collision name='capsule_collision'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='capsule_visual'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='capsule_2_10'>
+      <pose>-7.4020411816185021 18.577261641850605 0.499999999902001 0 0 0</pose>
+      <link name='capsule_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.074153999999999998</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.074153999999999998</iyy>
+            <iyz>0</iyz>
+            <izz>0.018769000000000001</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <collision name='capsule_collision'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='capsule_visual'>
+          <geometry>
+            <capsule>
+              <radius>0.20000000000000001</radius>
+              <length>0.59999999999999998</length>
+            </capsule>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <light name='sun' type='directional'>
+      <pose>0 0 10 0 0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>-0.5 0.10000000000000001 -0.90000000000000002</direction>
+      <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+      <specular>0.200000003 0.200000003 0.200000003 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.01</linear>
+        <constant>0.90000000000000002</constant>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>

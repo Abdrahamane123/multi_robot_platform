@@ -1,0 +1,437 @@
+<sdf version='1.10'>
+  <world name='empty'>
+    <physics name='1ms' type='ignored'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <plugin name='gz::sim::systems::Physics' filename='gz-sim-physics-system'/>
+    <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
+    <plugin name='gz::sim::systems::SceneBroadcaster' filename='gz-sim-scene-broadcaster-system'/>
+    <plugin name='gz::sim::systems::Sensors' filename='gz-sim-sensors-system'>
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin name='gz::sim::systems::Contact' filename='gz-sim-contact-system'/>
+    <gravity>0 0 -9.8000000000000007</gravity>
+    <magnetic_field>5.5644999999999998e-06 2.2875799999999999e-05 -4.2388400000000002e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.400000006 0.400000006 0.400000006 1</ambient>
+      <background>0.699999988 0.699999988 0.699999988 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <model name='ground_plane'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.800000012 0.800000012 0.800000012 1</ambient>
+            <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+            <specular>0.800000012 0.800000012 0.800000012 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 0 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree</name>
+      <pose>2.9091447386085942 -1.9996553155879313 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_1</name>
+      <pose>2.006991452862497 -1.964133723651206 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_2</name>
+      <pose>0.99837665251626628 -2.0031825385840696 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_3</name>
+      <pose>0.0042725177685256632 -1.9327276429044744 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_4</name>
+      <pose>3.9655136567197058 -2.1005393551916374 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_5</name>
+      <pose>4.9706623373823966 -2.2320106904042447 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_6</name>
+      <pose>5.9782199081245313 -1.9142315873572011 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_7</name>
+      <pose>6.9129483951646673 -2.0242960227115572 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_8</name>
+      <pose>8.1529077449031568 -2.0815610507034417 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_9</name>
+      <pose>9.0589027340831336 -2.010092085938207 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_10</name>
+      <pose>1.0034551196906327 1.974761432198554 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_11</name>
+      <pose>2.0727395090206873 1.977677787209756 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_12</name>
+      <pose>3.0009081026002762 2.0797173880325115 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_13</name>
+      <pose>4.0174071823840691 1.9862250594417468 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_14</name>
+      <pose>5.0677110203004192 1.9385157664238069 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_15</name>
+      <pose>5.9956409551230516 2.1088340116161701 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_16</name>
+      <pose>6.9512229282974305 1.9963770243994952 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_17</name>
+      <pose>8.0496317143364564 2.0453992565960153 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_18</name>
+      <pose>9.0299041073110367 2.0166809967972186 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_19</name>
+      <pose>10.142338074112629 -2.0332691807073031 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_20</name>
+      <pose>10.12811418471407 1.913050821016161 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_21</name>
+      <pose>10.003067408514315 -6.0445265560485932 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_22</name>
+      <pose>8.9056076567470743 -5.9547448453607466 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_23</name>
+      <pose>7.97360047128387 -6.0752137673559794 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_24</name>
+      <pose>7.0409562135842636 -5.9150070107952963 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_25</name>
+      <pose>6.0104674738614854 -5.8525623580508643 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_26</name>
+      <pose>5.0302874632788726 -6.0122848723042894 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_27</name>
+      <pose>4.0553334980712119 -6.1016851939529806 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_28</name>
+      <pose>2.9876852582400462 -5.9865959265912538 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_29</name>
+      <pose>1.9710880209326245 -6.0176846090605114 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_30</name>
+      <pose>0.9360495683411969 -6.03039425146269 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_31</name>
+      <pose>-0.046502545866720091 -6.1281520474199009 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_32</name>
+      <pose>-0.068997968341480753 1.9889430759905724 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_33</name>
+      <pose>0.43409688975791383 6.0502716089275594 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_34</name>
+      <pose>1.5574745798152239 6.0187333559578988 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_35</name>
+      <pose>2.4707889315479168 6.0102873030895694 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_36</name>
+      <pose>3.4871927195069814 6.0052386652754972 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_37</name>
+      <pose>4.5466294884323624 5.9130154578161109 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_38</name>
+      <pose>5.55258679321941 6.0297482183647979 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_39</name>
+      <pose>6.4341332107071265 6.0820993225383528 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_40</name>
+      <pose>7.4410348063479788 5.9496556904458764 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_41</name>
+      <pose>8.5615130719044874 6.014229304077455 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_42</name>
+      <pose>9.4870144446960296 6.0731223707091164 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_43</name>
+      <pose>10.119435063800527 6.0082942461966109 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_44</name>
+      <pose>11.062698328331424 -1.9877661091786969 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_45</name>
+      <pose>11.058650150449647 -5.9676237419580982 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_46</name>
+      <pose>12.032071725264782 -5.8369534762159745 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_47</name>
+      <pose>11.971441569978904 -2.1074266466026748 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_48</name>
+      <pose>11.423589813338536 2.1292645070487897 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_49</name>
+      <pose>10.912033939964585 5.9965180751879981 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_50</name>
+      <pose>11.737269629001268 6.0645236779125433 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_51</name>
+      <pose>12.525103530887048 6.0741515279892333 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_52</name>
+      <pose>13.28849857036826 6.0876105838943424 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_53</name>
+      <pose>12.553733481295748 1.6376206094783292 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_54</name>
+      <pose>13.57944756721049 1.4447393439525626 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_55</name>
+      <pose>14.386826740546718 1.6268494018682462 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_56</name>
+      <pose>13.137578217114838 -2.2085363953402446 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_57</name>
+      <pose>14.191363124738462 -2.5947167321785614 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_58</name>
+      <pose>15.174483025045468 -2.6575382765954298 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_59</name>
+      <pose>15.711513029276251 1.2689914144682843 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_60</name>
+      <pose>14.446472169783123 5.7766714158352084 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_61</name>
+      <pose>15.116094492099801 5.7479668504334427 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_62</name>
+      <pose>16.187520321621442 -2.5639675287266743 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_63</name>
+      <pose>13.880202621439649 -5.7788479428768689 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_64</name>
+      <pose>12.903766757701831 -5.9676075787302381 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_65</name>
+      <pose>14.830575380140774 -5.7400087850724937 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_66</name>
+      <pose>15.552105875304948 -5.7282827289270575 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/openrobotics/models/pine tree/6</uri>
+      <name>Pine Tree_67</name>
+      <pose>16.191647953151413 -5.7176780734350778 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/dev/.gz/fuel/fuel.gazebosim.org/hexarotor/models/grasspatch/1</uri>
+      <name>grasspatch</name>
+      <pose>4.5758994901260568 -1.0022740750287542 0 0 0 0</pose>
+    </include>
+    <light name='sun' type='directional'>
+      <pose>0 0 10 0 0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>-0.5 0.10000000000000001 -0.90000000000000002</direction>
+      <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+      <specular>0.200000003 0.200000003 0.200000003 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.01</linear>
+        <constant>0.90000000000000002</constant>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>

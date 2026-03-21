@@ -1,0 +1,377 @@
+<sdf version='1.10'>
+  <world name='empty'>
+    <physics name='1ms' type='ignored'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <plugin name='gz::sim::systems::Physics' filename='gz-sim-physics-system'/>
+    <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
+    <plugin name='gz::sim::systems::SceneBroadcaster' filename='gz-sim-scene-broadcaster-system'/>
+    <plugin name='gz::sim::systems::Sensors' filename='gz-sim-sensors-system'>
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin name='gz::sim::systems::Contact' filename='gz-sim-contact-system'/>
+    <gravity>0 0 -9.8000000000000007</gravity>
+    <magnetic_field>5.5644999999999998e-06 2.2875799999999999e-05 -4.2388400000000002e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.400000006 0.400000006 0.400000006 1</ambient>
+      <background>0.699999988 0.699999988 0.699999988 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <model name='ground_plane'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.800000012 0.800000012 0.800000012 1</ambient>
+            <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+            <specular>0.800000012 0.800000012 0.800000012 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 0 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2</name>
+      <pose>0 2.9912800788879395 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_1</name>
+      <pose>2.0386420273639585 2.9676947814864736 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_2</name>
+      <pose>3.9952143679406875 2.9680230465510942 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_3</name>
+      <pose>5.95081042934485 2.9262874689396421 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_4</name>
+      <pose>7.9889361970304602 3.0084652947340675 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_5</name>
+      <pose>10.004565594308064 2.9561249633034263 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_6</name>
+      <pose>11.808435932761949 3.0272097733291279 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_7</name>
+      <pose>13.448000972951167 3.055311009828007 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_8</name>
+      <pose>15.232659192069425 3.1308952469665758 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_9</name>
+      <pose>16.890139687625496 3.1594621211157481 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_10</name>
+      <pose>18.581904536785288 3.1847525958644365 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_11</name>
+      <pose>20.213519849843308 3.221936692095821 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_12</name>
+      <pose>21.762852231761698 3.2787513892599929 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_13</name>
+      <pose>23.287361494172657 3.2217978917903025 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_14</name>
+      <pose>25.029292779032502 3.3438353765237459 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_15</name>
+      <pose>26.684142033145655 3.3980685094054568 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_16</name>
+      <pose>28.058539973336966 3.3771078391526297 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_17</name>
+      <pose>29.522535960488064 3.4366829140584283 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_18</name>
+      <pose>-0.026575802761367839 -3.0093165311765651 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_19</name>
+      <pose>2.0255225472622644 -2.9676408535904173 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_20</name>
+      <pose>4.0574235841483084 -3.0219640003311081 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_21</name>
+      <pose>6.066421562663594 -2.9751150745650978 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_22</name>
+      <pose>7.950259481583422 -3.0582104920964452 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_23</name>
+      <pose>9.9360898853694923 -3.0233819146079881 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_24</name>
+      <pose>11.59697956580467 -2.9792176412472191 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_25</name>
+      <pose>13.125334218895963 -2.887430437628324 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_26</name>
+      <pose>14.765007134693686 -2.9453464045697313 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_27</name>
+      <pose>16.421603435092152 -2.9185976727676373 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_28</name>
+      <pose>17.802770624299633 -2.886963295912385 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_29</name>
+      <pose>19.449233137477677 -2.9170406028679041 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_30</name>
+      <pose>21.057533885724176 -2.9700897877518617 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_31</name>
+      <pose>22.606773902665005 -2.9087705004844082 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_32</name>
+      <pose>24.257728013709634 -2.8747589767874793 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_33</name>
+      <pose>25.769264007872447 -2.9143567361602694 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_34</name>
+      <pose>27.397014542831243 -2.9310262029901795 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_35</name>
+      <pose>28.767653627550686 -2.7183511812284173 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_36</name>
+      <pose>30.060510116271473 -2.8010236092060219 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_37</name>
+      <pose>30.235800818579538 3.496344743503184 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_18_1</name>
+      <pose>0.057122748850776617 -8.9964801249732123 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_18_2</name>
+      <pose>1.9613206068278675 -9.0310713483498954 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_18_3</name>
+      <pose>4.0355266974763335 -9.03658303524087 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_18_4</name>
+      <pose>6.0515966721919492 -9.0412798774524319 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_18_5</name>
+      <pose>7.9063875568982693 -9.04078369992685 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_18_6</name>
+      <pose>10.032053643797518 -9.033264289817609 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_18_7</name>
+      <pose>11.882614642882496 -9.1170771669858972 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_18_8</name>
+      <pose>13.530811520276075 -8.994535740502565 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_18_9</name>
+      <pose>15.097480434891366 -8.962219771662264 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_18_10</name>
+      <pose>16.735933973770127 -8.8884204147254007 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_18_11</name>
+      <pose>18.399023278907997 -8.946938144003262 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_18_12</name>
+      <pose>19.949691507163802 -8.8303122999607666 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_18_13</name>
+      <pose>21.319698802635898 -8.9351662510491661 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_18_14</name>
+      <pose>22.793319678552908 -8.9226135943557576 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_18_15</name>
+      <pose>24.353198180033921 -8.8407964933378747 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_18_16</name>
+      <pose>25.688145527536022 -8.9049895513497983 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_18_17</name>
+      <pose>27.033051663912556 -8.9032772695097719 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_18_18</name>
+      <pose>28.554412712422717 -8.9039081373683064 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/Abdrahamane123/models/lemon_tree</uri>
+      <name>tree2_18_19</name>
+      <pose>30.01884988292559 -8.818387610321814 0 0 0 0</pose>
+    </include>
+    <light name='sun' type='directional'>
+      <pose>0 0 10 0 0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>-0.5 0.10000000000000001 -0.90000000000000002</direction>
+      <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+      <specular>0.200000003 0.200000003 0.200000003 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.01</linear>
+        <constant>0.90000000000000002</constant>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>

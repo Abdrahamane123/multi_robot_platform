@@ -3,6 +3,9 @@
 
     <xacro:include filename="inertial_macros.xacro"/>
 
+    <xacro:arg name="robot_name" default=""/>
+    <xacro:property name="robot_name" value="$(arg robot_name)"/>
+
     <xacro:property name="chassis_length" value="0.335"/>
     <xacro:property name="chassis_width" value="0.265"/>
     <xacro:property name="chassis_height" value="0.138"/>
@@ -19,8 +22,8 @@
         <color rgba="1 1 1 1" />
     </material>
 
-    <material name="orange">
-        <color rgba="1 0.3 0.1 1"/>
+    <material name="violet">
+        <color rgba="0.745 0.0117 0.9921 1"/>
     </material>
 
     <material name="blue">
@@ -33,6 +36,14 @@
 
     <material name="red">
         <color rgba="1 0 0 1"/>
+    </material>
+
+    <material name="green">
+        <color rgba="0.18 0.8 0.25 1"/>
+    </material>
+
+    <material name="orange">
+        <color rgba="1.0 0.55 0.0 1"/>
     </material>
 
     <!-- BASE LINK -->
@@ -63,7 +74,12 @@
             <geometry>
                 <box size="${chassis_length} ${chassis_width} ${chassis_height}"/>
             </geometry>
-            <material name="orange"/>
+            <xacro:if value="${robot_name == 'robot2'}">
+                <material name="green"/>
+            </xacro:if>
+            <xacro:unless value="${robot_name == 'robot2'}">
+                <material name="violet"/>
+            </xacro:unless>
         </visual>
         <collision>
             <origin xyz="${chassis_length/2} 0 ${chassis_height/2}"/>
@@ -77,7 +93,12 @@
     </link>
 
     <gazebo reference="chassis">
-        <material>Gazebo/Orange</material>
+        <xacro:if value="${robot_name == 'robot2'}">
+            <material>Gazebo/Green</material>
+        </xacro:if>
+        <xacro:unless value="${robot_name == 'robot2'}">
+            <material>Gazebo/Violet</material>
+        </xacro:unless>
     </gazebo>
 
     <!-- FRONT LEFT WHEEL LINK -->
@@ -107,7 +128,12 @@
     </link>
 
     <gazebo reference="left_wheel">
-        <material>Gazebo/Blue</material>
+        <xacro:if value="${robot_name == 'robot2'}">
+            <material>Gazebo/Orange</material>
+        </xacro:if>
+        <xacro:unless value="${robot_name == 'robot2'}">
+            <material>Gazebo/Blue</material>
+        </xacro:unless>
     </gazebo>
 
     <!-- FRONT RIGHT WHEEL LINK -->
@@ -137,7 +163,12 @@
     </link>
 
     <gazebo reference="right_wheel">
-        <material>Gazebo/Blue</material>
+        <xacro:if value="${robot_name == 'robot2'}">
+            <material>Gazebo/Orange</material>
+        </xacro:if>
+        <xacro:unless value="${robot_name == 'robot2'}">
+            <material>Gazebo/Blue</material>
+        </xacro:unless>
     </gazebo>
 
     <!-- REAR LEFT WHEEL LINK -->
@@ -167,7 +198,12 @@
     </link>
 
     <gazebo reference="rear_left_wheel">
-        <material>Gazebo/Blue</material>
+        <xacro:if value="${robot_name == 'robot2'}">
+            <material>Gazebo/Orange</material>
+        </xacro:if>
+        <xacro:unless value="${robot_name == 'robot2'}">
+            <material>Gazebo/Blue</material>
+        </xacro:unless>
     </gazebo>
 
     <!-- REAR RIGHT WHEEL LINK -->
@@ -197,7 +233,12 @@
     </link>
 
     <gazebo reference="rear_right_wheel">
-        <material>Gazebo/Blue</material>
+        <xacro:if value="${robot_name == 'robot2'}">
+            <material>Gazebo/Orange</material>
+        </xacro:if>
+        <xacro:unless value="${robot_name == 'robot2'}">
+            <material>Gazebo/Blue</material>
+        </xacro:unless>
     </gazebo>
 
 </robot>

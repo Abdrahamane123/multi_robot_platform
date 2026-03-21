@@ -3,6 +3,7 @@
 
     <xacro:arg name="use_ros2_control" default="true"/>
     <xacro:arg name="sim_mode" default="false"/>
+    <xacro:arg name="robot_name" default=""/>
 
     <xacro:include filename="robot_core.xacro" />
 
@@ -16,6 +17,6 @@
     <xacro:include filename="camera.xacro" />
     <!-- <xacro:include filename="depth_camera.xacro" /> -->
 
-    <xacro:include filename="face.xacro" />
+
     
 </robot>
