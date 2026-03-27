@@ -5,7 +5,7 @@ import yaml
 from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, RegisterEventHandler, OpaqueFunction
+from launch.actions import DeclareLaunchArgument, RegisterEventHandler, OpaqueFunction, LogInfo, SetLaunchConfiguration
 from launch.event_handlers import OnProcessExit
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.actions import IncludeLaunchDescription
@@ -23,6 +23,7 @@ def generate_launch_description():
     # ── World ──────────────────────────────────────────────────────────
     default_world = os.path.join(pkg_path, 'worlds', 'empty.world')
     world = LaunchConfiguration('world')
+    resolved_world = LaunchConfiguration('resolved_world')
     world_arg = DeclareLaunchArgument(
         'world',
         default_value=default_world,
@@ -45,10 +46,48 @@ def generate_launch_description():
             )
         ),
         launch_arguments={
-            'gz_args': ['-r -v4 ', world],
+            'gz_args': ['-r -v4 ', resolved_world],
             'on_exit_shutdown': 'true',
         }.items(),
     )
+    def _resolve_world_path(context):
+        requested_world = world.perform(context)
+
+        # Try user-provided path first.
+        if os.path.isfile(requested_world):
+            chosen_world = requested_world
+            msg = f'[multi_robot_platform] Using world: {chosen_world}'
+            return [
+                SetLaunchConfiguration('resolved_world', chosen_world),
+                LogInfo(msg=msg),
+            ]
+
+        # Then try package-local worlds folder with full value and basename.
+        candidates = [
+            os.path.join(pkg_path, 'worlds', requested_world),
+            os.path.join(pkg_path, 'worlds', os.path.basename(requested_world)),
+        ]
+        for candidate in candidates:
+            if os.path.isfile(candidate):
+                msg = (
+                    '[multi_robot_platform] Provided world not found: '
+                    f'{requested_world}. Falling back to: {candidate}'
+                )
+                return [
+                    SetLaunchConfiguration('resolved_world', candidate),
+                    LogInfo(msg=msg),
+                ]
+
+        # Last resort: built-in default world.
+        msg = (
+            '[multi_robot_platform] Provided world not found: '
+            f'{requested_world}. Falling back to default world: {default_world}'
+        )
+        return [
+            SetLaunchConfiguration('resolved_world', default_world),
+            LogInfo(msg=msg),
+        ]
+
 
     # ── Multi-robot parameters ─────────────────────────────────────────
     robot_count = LaunchConfiguration('robot_count')
@@ -404,5 +443,6 @@ def generate_launch_description():
         use_slam_arg,
         robot_count_arg,
         robot_spacing_arg,
+        OpaqueFunction(function=_resolve_world_path),
         OpaqueFunction(function=launch_setup),
     ])
